@@ -5,4 +5,7 @@ const port = process.env.PORT || 3000;
 
 connectDB();
 app.listen(port);
+app.get('/', (req, res) => {
+    res.end('it works!');
+});
 console.log('Server on port', port)
