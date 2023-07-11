@@ -41,9 +41,7 @@ export const ingreso = async (req, res) => {
         if (!isMatch) return res.status(400).json({message: "La contraseña es incorrecta"});
 
         const token = await createAccessToken({id: userFound._id})
-        res.cookie('token', token,{
-            httpsOnly: true,
-        });
+        res.cookie('token', token);
         res.json({
             id: userSaved._id,
             username: userSaved.username,
