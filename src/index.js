@@ -5,4 +5,4 @@ const port = process.env.PORT || 3000;
 
 connectDB();
 app.listen(port);
-console.log('Server on port', port);
+console.log('Server on port', port)

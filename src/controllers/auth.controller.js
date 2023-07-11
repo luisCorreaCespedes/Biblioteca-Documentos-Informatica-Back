@@ -43,10 +43,10 @@ export const ingreso = async (req, res) => {
         const token = await createAccessToken({id: userFound._id})
         res.cookie('token', token);
         res.json({
-            id: userSaved._id,
-            username: userSaved.username,
-            email: userSaved.email,
-            usertype: userSaved.usertype,
+            id: userFound._id,
+            username: userFound.username,
+            email: userFound.email,
+            usertype: userFound.usertype
         });
     } catch (error) {
         console.log(error);
