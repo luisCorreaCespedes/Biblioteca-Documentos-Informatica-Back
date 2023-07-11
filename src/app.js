@@ -7,7 +7,7 @@ import cors from "cors";
 
 const app = express();
 app.use(cors({
-    origin: "https://bibliodocumentosinformaticaapi.onrender.com",
+    origin: "https://bibliodocumentosinformatica.onrender.com",
     credentials: true
 }));
 app.use(morgan('dev'));
