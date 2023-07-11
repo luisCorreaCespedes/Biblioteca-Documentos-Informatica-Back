@@ -9,8 +9,8 @@ const app = express();
 app.use(cors({
     origin: "https://bibliodocumentosinformatica.onrender.com",
     credentials: true,
-    allowedHeaders: false
 }));
+app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api", authRoutes);
