@@ -10,7 +10,6 @@ app.use(cors({
     origin: "https://bibliodocumentosinformatica.onrender.com",
     credentials: true
 }));
-app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api", authRoutes);
