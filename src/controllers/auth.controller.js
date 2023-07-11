@@ -42,7 +42,7 @@ export const ingreso = async (req, res) => {
 
         const token = await createAccessToken({id: userFound._id})
         res.cookie('token', token,{
-            httpOnly: true,
+            httpsOnly: true,
         });
         res.json({
             id: userSaved._id,
