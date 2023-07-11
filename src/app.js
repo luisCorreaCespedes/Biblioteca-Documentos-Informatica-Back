@@ -9,7 +9,7 @@ const app = express();
 app.use(cors({
     origin: "https://bibliodocumentosinformatica.onrender.com",
     credentials: true,
-    token: true
+    allowedHeaders: true
 }));
 app.use(express.json());
 app.use(cookieParser());
