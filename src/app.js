@@ -8,7 +8,13 @@ import cors from "cors";
 const app = express();
 app.use(cors({
     origin: "https://bibliodocumentosinformatica.onrender.com",
-    credentials: true
+    credentials: true,
+    methods: ['GET', 'PUT', 'POST', 'DELETE'],
+    allowedHeaders: [
+        'Access-Control-Allow-Origin',
+        'Content-Type',
+        'Authorization',
+    ]
 }));
 app.use(morgan('dev'));
 app.use(express.json());
