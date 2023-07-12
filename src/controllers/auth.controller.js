@@ -44,7 +44,7 @@ export const ingreso = async (req, res) => {
         res.cookie('token', token, {
             domain: 'onrender.com',
             httpOnly: false,
-            sameSite: 'none',
+            sameSite: 'lax',
             secure: true,
         });
         res.json({
