@@ -43,7 +43,7 @@ export const ingreso = async (req, res) => {
         const token = await createAccessToken({id: userFound._id})
         res.cookie('token', token, {
             domain: 'onrender.com',
-            httpOnly: true,
+            httpOnly: false,
             sameSite: 'none',
             secure: true,
         });
