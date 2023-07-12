@@ -19,7 +19,7 @@ app.use(cors({
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
-app.use(authRoutes);
-app.use(docsRoutes);
+app.use("/api", authRoutes);
+app.use("/api", docsRoutes);
 
 export default app;
