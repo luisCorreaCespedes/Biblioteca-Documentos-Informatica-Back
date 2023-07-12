@@ -14,7 +14,7 @@ app.use(cors({
         'Access-Control-Allow-Origin',
         'Content-Type',
         'Authorization',
-    ]
+    ],
 }));
 app.use(morgan('dev'));
 app.use(express.json());
