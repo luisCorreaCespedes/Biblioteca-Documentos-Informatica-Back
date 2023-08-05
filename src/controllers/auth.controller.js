@@ -20,12 +20,11 @@ export const registro = async (req, res) => {
         const userSaved = await newUser.save();
         const token = await createAccessToken({id: userSaved._id})
         res.cookie('token', token, {
-            httpOnly: true, 
+            httpOnly: false, 
             sameSite: 'none', 
-            secure: true, 
+            secure: true,
             domain: '.bibliodocumentosinformatica.lol'
         });
-        
         
         res.json({
             id: userSaved._id,
