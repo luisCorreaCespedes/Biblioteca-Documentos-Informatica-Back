@@ -72,8 +72,7 @@ export const salir = (req, res) => {
         httpOnly: false, 
         sameSite: 'none', 
         secure: true,
-        path: '/',
-        maxAge: 0 // esto establece el tiempo de vida de la cookie en 0
+        domain: '.bibliodocumentosinformatica.lol'
     });
     return res.sendStatus(200);
 }
