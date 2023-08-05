@@ -6,8 +6,15 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 const app = express();
+const express = require('express');
+const cors = require('cors');
+
 app.use(cors({
-    origin: ["https://bibliodocumentosinformatica.lol", "https://www.bibliodocumentosinformatica.lol"],
+    origin: [
+        "https://www.bibliodocumentosinformatica.lol",
+        "https://bibliodocumentosinformatica.lol",
+        "https://bibliodocumentosinformaticaapi.onrender.com"
+    ],
     credentials: true,
     methods: ['GET', 'PUT', 'POST', 'DELETE'],
     allowedHeaders: [
@@ -17,6 +24,7 @@ app.use(cors({
         'Authorization',
     ],
 }));
+
 
 app.use(morgan('dev'));
 app.use(express.json());
