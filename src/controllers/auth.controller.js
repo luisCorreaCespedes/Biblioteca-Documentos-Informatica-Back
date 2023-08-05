@@ -69,7 +69,11 @@ export const ingreso = async (req, res) => {
 
 export const salir = (req, res) => {
     res.cookie('token', '', {
-        expires: new Date(0)
+        expires: new Date(0),
+        httpOnly: false, 
+        sameSite: 'none', 
+        secure: true,
+        domain: '.bibliodocumentosinformatica.lol'
     });
     return res.sendStatus(200);
 }
