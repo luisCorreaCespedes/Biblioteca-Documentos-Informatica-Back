@@ -69,14 +69,15 @@ export const ingreso = async (req, res) => {
 
 export const salir = (req, res) => {
     res.cookie('token', '', {
-        expires: new Date(0),
         httpOnly: false, 
         sameSite: 'none', 
         secure: true,
-        domain: '.bibliodocumentosinformatica.lol'
+        path: '/',
+        maxAge: 0 // esto establece el tiempo de vida de la cookie en 0
     });
     return res.sendStatus(200);
 }
+
 
 export const perfil = async (req, res) => {
     const userFound = await User.findById(req.user.id);
