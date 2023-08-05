@@ -20,7 +20,10 @@ export const registro = async (req, res) => {
         const userSaved = await newUser.save();
         const token = await createAccessToken({id: userSaved._id})
         res.cookie('token', token, {
+            httpOnly: true, 
+            sameSite: 'none', 
             secure: true,
+            maxAge: 24 * 60 * 60 * 1000
         });
         res.json({
             id: userSaved._id,
