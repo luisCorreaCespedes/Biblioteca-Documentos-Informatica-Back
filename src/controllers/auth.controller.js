@@ -22,7 +22,7 @@ export const registro = async (req, res) => {
         res.cookie('token', token, {
             httpOnly: false, 
             sameSite: 'none', 
-            secure: false
+            secure: true
         });
         res.json({
             id: userSaved._id,
