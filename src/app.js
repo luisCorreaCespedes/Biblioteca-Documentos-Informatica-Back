@@ -7,10 +7,7 @@ import cors from "cors";
 
 const app = express();
 app.use(cors({
-    origin: [
-        "https://bibliodocumentosinformatica.lol",
-        "https://www.bibliodocumentosinformatica.lol"
-    ],
+    origin: ["https://www.bibliodocumentosinformatica.lol", "https://server.bibliodocumentosinformatica.lol"],
     credentials: true,
     methods: ['GET', 'PUT', 'POST', 'DELETE'],
     allowedHeaders: [
@@ -20,6 +17,7 @@ app.use(cors({
         'Authorization',
     ],
 }));
+
 
 app.use(morgan('dev'));
 app.use(express.json());

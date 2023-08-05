@@ -22,8 +22,10 @@ export const registro = async (req, res) => {
         res.cookie('token', token, {
             httpOnly: false, 
             sameSite: 'none', 
-            secure: true
+            secure: true,
+            domain: '.bibliodocumentosinformatica.lol' // Asegura que la cookie sea válida para todos los subdominios
         });
+        
         res.json({
             id: userSaved._id,
             username: userSaved.username,
