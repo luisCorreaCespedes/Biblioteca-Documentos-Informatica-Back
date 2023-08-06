@@ -66,7 +66,6 @@ export const ingreso = async (req, res) => {
     }
 }
 
-
 export const salir = (req, res) => {
     res.cookie('token', '', {
         httpOnly: false, 
@@ -76,7 +75,6 @@ export const salir = (req, res) => {
     });
     return res.sendStatus(200);
 }
-
 
 export const perfil = async (req, res) => {
     const userFound = await User.findById(req.user.id);

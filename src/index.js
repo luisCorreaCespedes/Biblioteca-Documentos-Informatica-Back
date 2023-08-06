@@ -7,6 +7,6 @@ connectDB();
 
 app.listen(port);
 app.get('/', (req, res) => {
-    res.end('it works!');
+    res.end('Funcionando correctamente!');
 });
 console.log('Server on port', port)
